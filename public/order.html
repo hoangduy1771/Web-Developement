@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="./site.css" type="text/css" />
+  <style>
+    @media only screen and (min-width:768px) {
+      article {
+        width: 800px;
+      }
+    }
+
+    .input-group {
+      margin-bottom: 20px;
+    }
+
+    .input-group input,
+    .input-group textarea,
+    .input-group select {
+      padding: 10px;
+      border: 1px solid #999;
+      border-radius: 2px;
+      width: 100%;
+    }
+
+    .note {
+      color: red;
+    }
+
+    label {
+      font-weight: 600;
+    }
+
+    input[type="reset"] {
+      background: transparent;
+      border: 0;
+      text-decoration: underline;
+      cursor: pointer;
+    }
+
+    input[type="submit"] {
+      border: solid 1px #999;
+      border-radius: 3px;
+      padding: 10px;
+    }
+
+    article {
+      background-color: #ffe0a3;
+    }
+  </style>
+  <title>Order | Boni Bakery</title>
+</head>
+
+<body>
+  <header>
+    <nav>
+      <ul>
+        <li><a href="/public">Home</a></li>
+        <li><a href="product.html">Product</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+  <main>
+    <aside>
+      <img src="./images/logo.png" alt="BoNi Bakery" style="width: 200px; height: 200px" />
+    </aside>
+    <article>
+      <h1>Order</h1>
+
+      <div class="product-container">
+        <img src="" alt="" />
+        <div class="columns">
+          <div class="title"></div>
+          <div class="price"></div>
+        </div>
+        <p class="description"></p>
+      </div>
+
+      <p class="note">*Note: Boni bakery is only available in Ho Chi Minh city</p>
+      <form action="" method="POST">
+
+        <div class="input-group">
+          <div>
+            <label for="first-name">First name</label>
+          </div>
+          <div>
+            <input type="text" name="first-name" id="first-name">
+          </div>
+        </div>
+
+        <div class="input-group">
+          <div>
+            <label for="last-name">Last name</label>
+          </div>
+          <div>
+            <input type="text" name="last-name" id="last-name">
+          </div>
+        </div>
+
+        <div class="input-group">
+          <div>
+            <label for="address">Address</label>
+          </div>
+          <div>
+            <input type="text" name="address" id="address">
+          </div>
+        </div>
+
+        <div class="input-group">
+          <div>
+            <label for="district">District</label>
+          </div>
+          <div>
+            <select name="district" id="district">
+              <option value="" selected>Select District</option>
+              <option value="">District 1</option>
+              <option value="">District 2</option>
+              <option value="">District 3</option>
+              <option value="">District 4</option>
+              <option value="">District 5</option>
+              <option value="">District 6</option>
+              <option value="">District 7</option>
+              <option value="">District 8</option>
+              <option value="">District 9</option>
+              <option value="">District 10</option>
+              <option value="">District 11</option>
+              <option value="">District 12</option>
+              <option value="">District Binh Thanh</option>
+              <option value="">District Thu Duc</option>
+              <option value="">District Go Vap</option>
+              <option value="">District Phu Nhuan</option>
+              <option value="">District Tan Binh</option>
+              <option value="">District Tan Phu</option>
+              <option value="">District Binh Tan</option>
+              <option value="">District Nha Be</option>
+              <option value="">District Hoc Mon</option>
+              <option value="">District Binh Chanh</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="input-group">
+          <div>
+            <label for="comments">Comments</label>
+          </div>
+          <div>
+            <textarea name="comments" id="comments" cols="30" rows="10"></textarea>
+          </div>
+        </div>
+
+        <input type="reset" value="Reset">
+        <input type="submit" value="Order">
+
+      </form>
+    </article>
+  </main>
+
+  <footer>
+    <nav>
+      <ul>
+        <li><a href="/public">Home</a></li>
+        <li><a href="product.html">Product</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </footer>
+</body>
+
+<script>
+  window.addEventListener("DOMContentLoaded", function (e) {
+
+    const order = localStorage.getItem("order");
+
+    if (order) {
+      const productOrder = JSON.parse(order);
+
+      const product = document.querySelector(".product-container");
+
+      const title = product.querySelector(".title");
+      const price = product.querySelector(".price");
+      const description = product.querySelector(".description");
+
+      title.innerText = productOrder.title;
+      price.innerText = productOrder.price;
+      description.innerText = productOrder.description;
+
+      const img = product.querySelector("img");
+      img.setAttribute("src", `images/${productOrder.id}.jpg`);
+      img.setAttribute("alt", productOrder.title);
+    }
+
+
+  });
+
+</script>
+
+</html>

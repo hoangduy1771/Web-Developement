@@ -44,7 +44,7 @@ nav > ul > li {
 
 main {
   display: block;
-  background-image: url("/images/background.jpg");
+  background-image: url("./images/background.jpg");
   padding-top: 3em;
   padding-bottom: 3em;
   min-height: 85%;
@@ -80,14 +80,14 @@ article {
   .columns-desktop {
     display: flex;
   }
-  .cheesecake-container img {
+  .product-container img {
     width: 100%;
     height: 100%;
   }
 }
 
 /* Cheese cake */
-.cheesecake-container {
+.product-container {
   width: 250px;
   padding: 10px;
   margin: 10px;
@@ -95,16 +95,16 @@ article {
   border: solid 1px #ccc;
 }
 
-.cheesecake-container img {
+.product-container img {
   width: 250px;
   height: 250px;
 }
 
-.cheesecake-container .title {
+.product-container .title {
   font-weight: bold;
 }
 
-.cheesecake-container button {
+.product-container button {
   background-color: #944;
   padding: 10px;
   /* border: solid 1px #f6aeae; */

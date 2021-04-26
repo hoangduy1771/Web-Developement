@@ -1,95 +1,101 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="./site.css" type="text/css" />
-    <style>
-      .contact1 {
-        padding: 10px;
-        background-color: #ffe0a3;
-        max-width: 70%;
-      }
 
-      textarea {
-        display: block;
-        min-width: 95%;
-        min-height: 15em;
-      }
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="./site.css" type="text/css" />
+  <style>
+    .contact1 {
+      padding: 10px;
+      background-color: #ffe0a3;
+      max-width: 100%;
+    }
 
-      .wrap-input1 {
-        padding: 5px;
-      }
-    </style>
-    <title>Contact | Boni Bakery</title>
-  </head>
+    .wrap-input1 {
+      padding: 5px;
+    }
 
-  <body>
-    <header>
-      <nav>
-        <ul>
-          <li><a href="/">Home</a></li>
-          <li><a href="product.html">Product</a></li>
-          <li><a href="contact.html">Contact</a></li>
-        </ul>
-      </nav>
-    </header>
-    <main>
-      <aside>
-        <img
-          src="./images/logo.png"
-          alt="BoNi Bakery"
-          style="width: 200px; height: 200px"
-        />
-      </aside>
-      <article>
-        <div class="contact1">
-          <h1>Contact Us</h1>
-          <p>Store number: 0948748595</p>
-          <p>Email: hoangduy1771@gmail.com</p>
+    .wrap-input1 input,
+    textarea {
+      padding: 10px;
+      border: 1px solid #999;
+      border-radius: 2px;
+      width: 95%;
+    }
 
-          <p>
-            Send us a message and let us know how we can help make your occasion
-            special.
-          </p>
-          <p></p>
+    button {
+      border: solid 1px #999;
+      border-radius: 3px;
+      padding: 10px;
+    }
+  </style>
+  <title>Contact | Boni Bakery</title>
+</head>
 
-          <div class="container-contact1">
-            <form class="contact1-form">
-              <div class="wrap-input1">
-                <input type="text" placeholder="Your Name" />
-              </div>
+<body>
+  <header>
+    <nav>
+      <ul>
+        <li><a href="/public">Home</a></li>
+        <li><a href="product.html">Product</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+  <main>
+    <aside>
+      <img src="./images/logo.png" alt="BoNi Bakery" style="width: 200px; height: 200px" />
+    </aside>
+    <article>
+      <div class="contact1">
+        <h1>Contact Us</h1>
+        <p>Store number: 0948748595</p>
+        <p>Email: hoangduy1771@gmail.com</p>
 
-              <div class="wrap-input1">
-                <input type="text" placeholder="Your Email" />
-              </div>
+        <p>
+          Send us a message and let us know how we can help make your occasion
+          special.
+        </p>
+        <p></p>
 
-              <div class="wrap-input1">
-                <input type="text" placeholder="Subject" />
-              </div>
+        <div class="container-contact1">
+          <form class="contact1-form">
+            <div class="wrap-input1">
+              <input type="text" placeholder="Your Name" />
+            </div>
 
-              <div class="wrap-input1">
-                <textarea placeholder="Message"></textarea>
-              </div>
+            <div class="wrap-input1">
+              <input type="text" placeholder="Your Email" />
+            </div>
 
-              <div class="wrap-input1">
-                <button class="contact1-form-btn">Send Email</button>
-              </div>
-            </form>
-          </div>
+            <div class="wrap-input1">
+              <input type="text" placeholder="Subject" />
+            </div>
+
+            <div class="wrap-input1">
+              <textarea placeholder="Message" cols="30" rows="10"></textarea>
+            </div>
+
+            <div class="wrap-input1">
+              <button class="contact1-form-btn">Send Email</button>
+            </div>
+          </form>
         </div>
-      </article>
-    </main>
+      </div>
+    </article>
+  </main>
 
-    <footer>
-      <nav>
-        <ul>
-          <li><a href="/">Home</a></li>
-          <li><a href="product.html">Product</a></li>
-          <li><a href="contact.html">Contact</a></li>
-        </ul>
-      </nav>
-    </footer>
-  </body>
+  <footer>
+    <nav>
+      <ul>
+        <li><a href="/public">Home</a></li>
+        <li><a href="product.html">Product</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </footer>
+</body>
+
 </html>
